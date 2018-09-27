@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">TradeReport</string>
+    <string name="category">Category</string>
+    <string name="report_name">Report Name</string>
+    <string name="report_desc">Description</string>
 </resources>
