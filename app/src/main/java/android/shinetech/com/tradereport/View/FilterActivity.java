@@ -9,7 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-public class FilterActivity extends AppCompatActivity implements BaseView {
+public class FilterActivity  extends BaseView {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,6 @@ public class FilterActivity extends AppCompatActivity implements BaseView {
                 SearchPresenter searchPresenter = new SearchPresenter(FilterActivity.this);
                 String filterCondition =  searchPresenter.getSearchUrl();
 
-                //ReportPresenter reportPresenter  = new ReportPresenter(FilterActivity.this);
                 Intent i = new Intent(FilterActivity.this, ReportActivity.class);
                 i.putExtra("url",filterCondition);
                 startActivity(i);

@@ -12,12 +12,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class ReportPresenter {
-
-    public BaseView view = null;
+public class ReportPresenter extends BasePresenter {
     public ReportModel reportModel = null;
     public ReportPresenter(BaseView view) {
-        this.view = view;
+        super(view);
     }
 
     public void SetData() {

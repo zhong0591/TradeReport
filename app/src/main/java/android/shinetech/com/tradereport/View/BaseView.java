@@ -1,4 +1,7 @@
 package android.shinetech.com.tradereport.View;
 
-public interface BaseView {
+import android.support.v7.app.AppCompatActivity;
+
+public abstract class BaseView extends AppCompatActivity {
+
 }

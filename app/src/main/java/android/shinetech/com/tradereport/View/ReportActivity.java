@@ -5,7 +5,7 @@ import android.shinetech.com.tradereport.R;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class ReportActivity extends AppCompatActivity implements BaseView{
+public class ReportActivity  extends BaseView{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

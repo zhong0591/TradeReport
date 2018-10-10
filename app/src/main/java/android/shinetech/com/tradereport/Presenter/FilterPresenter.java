@@ -37,13 +37,11 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class FilterPresenter {
-    public BaseView view = null;
-    FilterActivity filterActivity;
-
-    public FilterPresenter(BaseView view) {
-        this.view = view;
-        filterActivity = (FilterActivity) view;
+public class FilterPresenter extends  BasePresenter {
+    FilterActivity filterActivity ;
+    public  FilterPresenter(BaseView view){
+        super(view);
+        filterActivity = (FilterActivity)view;
     }
 
     public void initFilterContent() {

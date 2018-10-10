@@ -13,18 +13,15 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 
-public class SearchPresenter {
-    public BaseView view = null;
+public class SearchPresenter extends  BasePresenter {
     FilterActivity filterActivity;
-
     public SearchPresenter(BaseView view) {
-        this.view = view;
+        super(view);
         filterActivity = (FilterActivity) view;
     }
 
 
     public String getSearchUrl() {
-
         LinearLayout ll = filterActivity.findViewById(R.id.ll_filter);
         int count = ll.getChildCount();
         String filterCondition = "";
@@ -62,7 +59,6 @@ public class SearchPresenter {
                 break;
             case FilterTypeHelper.Filter_Type_Checkbox:
 
-                //searchValue = checkBox.ge().toString();
                 String checkedValues = "";
                 int allViews =   line.getChildCount();
                 for(int index = 1;index < allViews; index ++){
@@ -83,7 +79,6 @@ public class SearchPresenter {
                 break;
 
         }
-        System.out.println("===============" + searchValue + "++++++++++++++++++++");
         return searchValue;
     }
 
