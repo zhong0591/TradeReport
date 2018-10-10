@@ -1,17 +1,12 @@
 package android.shinetech.com.tradereport.Presenter;
 
-import android.content.Context;
 import android.shinetech.com.tradereport.Bean.Report;
-import android.shinetech.com.tradereport.MainActivity;
 import android.shinetech.com.tradereport.Model.ReportModel;
 import android.shinetech.com.tradereport.R;
 import android.shinetech.com.tradereport.View.BaseView;
-import android.view.View;
+import android.shinetech.com.tradereport.View.ReportActivity;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.TableLayout;
-import android.widget.TableRow;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -21,7 +16,6 @@ public class ReportPresenter {
 
     public BaseView view = null;
     public ReportModel reportModel = null;
-
     public ReportPresenter(BaseView view) {
         this.view = view;
     }
@@ -39,12 +33,19 @@ public class ReportPresenter {
             data.add(item);
         }
 
-        MainActivity mv = ((MainActivity) view);
+        ReportActivity mv = ((ReportActivity) view);
         ListView listView = (ListView) mv.findViewById(R.id.listView);
         SimpleAdapter adapter = new SimpleAdapter(mv.getBaseContext(), data, R.layout.item, new String[]{"category", "name", "description"}, new int[]{R.id.category, R.id.name, R.id.description});
         listView.setAdapter(adapter);
-
     }
+
+
+
+
+
+
+
+
 
 
 }

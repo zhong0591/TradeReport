@@ -4,19 +4,19 @@ public class Report {
     public int id ;
     public  int categoryId;
     public  String categoryName;
-    public  String descripation;
+    public  String description;
     public  String reportName;
 
 
 
 
-    public  Report( int id, int categoryId, String categoryName, String reportName , String descripation){
+    public  Report( int id, int categoryId, String categoryName, String reportName , String description){
 
         this.id = id;
         this.categoryId = categoryId;
         this.categoryName = categoryName;
         this.reportName = reportName;
-        this.descripation = descripation;
+        this.description = description;
     }
 
     public int getCategoryId() {
@@ -45,11 +45,11 @@ public class Report {
 
 
     public String getDescripation() {
-        return descripation;
+        return description;
     }
 
     public void setDescripation(String descripation) {
-        this.descripation = descripation;
+        this.description = descripation;
     }
 
 

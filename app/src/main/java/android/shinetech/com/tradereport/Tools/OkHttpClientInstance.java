@@ -1,0 +1,26 @@
+package android.shinetech.com.tradereport.Tools;
+
+import java.util.concurrent.TimeUnit;
+
+import okhttp3.OkHttpClient;
+
+public class OkHttpClientInstance {
+    public static OkHttpClient instance;
+
+    private OkHttpClientInstance() {}
+
+    public static OkHttpClient getInstance() {
+        if (instance == null) {
+            synchronized (OkHttpClientInstance.class) {
+                if (instance == null) {
+                    instance = new OkHttpClient().newBuilder()
+                            .connectTimeout(10, TimeUnit.SECONDS)
+                            .readTimeout(10, TimeUnit.SECONDS)
+                            .writeTimeout(10, TimeUnit.SECONDS)
+                            .build();
+                }
+            }
+        }
+        return instance;
+    }
+}

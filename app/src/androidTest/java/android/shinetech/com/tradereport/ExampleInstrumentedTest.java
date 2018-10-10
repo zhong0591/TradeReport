@@ -1,6 +1,8 @@
 package android.shinetech.com.tradereport;
 
 import android.content.Context;
+import android.shinetech.com.tradereport.Bean.Report;
+import android.shinetech.com.tradereport.Model.ReportModel;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
 
@@ -23,4 +25,5 @@ public class ExampleInstrumentedTest {
 
         assertEquals("android.shinetech.com.tradereport", appContext.getPackageName());
     }
+
 }
